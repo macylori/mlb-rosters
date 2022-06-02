@@ -1,16 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Teams from './components/Teams';
+import Players from './components/Players';
+import Player from './components/Player';
 import './App.css';
 import React from 'react';
+import Roster from './components/Roster';
 
-function App() {
-  return (
-      <BrowserRouter>
+//             <Route path='teams/:id/players' element={<Roster/>} />
+
+class App extends React.Component {
+  render () {
+    return (
+      <div>
         <Routes>
-          <Route path='teams' element={<Teams/>} />
+          <Route path='/teams' element={<Teams/>} />
+          <Route path='/teams/:id/players' element={<Roster/>} />
+          <Route path='/player/:id' element={<Player/>} />
         </Routes>
-      </BrowserRouter>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

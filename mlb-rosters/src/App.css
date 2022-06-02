@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.Card {
+  text-align: center;
+  font-size: larger;
+  color: black;
+  width: 400px;
+}
