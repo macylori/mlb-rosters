@@ -34,13 +34,13 @@ class Roster extends React.Component {
   render () {
     const { error, isLoaded, players } = this.state;
     return(
-      <div>
+      <div className='App'>
         <h1 style={{ textAlign: 'center' }}>Team Roster</h1>
         <div style={{ alignItems: 'center' }}>
         { players.map((player) => (
-          <ul>
-            <Link to={`/player/${ player.id }`}><li>{player.name}</li></Link>
-          </ul>
+            <p style={{ textDecoration: 'none' }}>
+              <Link to={`/player/${ player.id }`} style={{ textDecoration: 'none', color: 'black' }}>{player.name}</Link>
+            </p>
         )) }
       </div>
       </div>

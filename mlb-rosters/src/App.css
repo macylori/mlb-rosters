@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding: 10%;
+  background-color: rgb(223, 223, 223);
 }
 
 .App-logo {
@@ -25,7 +27,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
@@ -41,5 +43,28 @@
   text-align: center;
   font-size: larger;
   color: black;
-  width: 400px;
+  width: 200px;
+  padding: 50px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 7px 7px 5px grey;
+}
+
+.Dropdown {
+  align-self: center;
+}
+
+.Player {
+  background-color: white;
+  width: 500px;
+  padding: 50px;
+  box-shadow: 7px 7px 5px grey;
+}
+
+.Jumbotron {
+  font-size: 2.5rem;
+  text-align: center;
+  background-image: url('../Images/mlb.jpeg');
+  height: 30%;
+  width: 100%;
 }

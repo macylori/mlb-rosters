@@ -34,13 +34,15 @@ class Player extends React.Component {
   render () {
     const { error, isLoaded, player } = this.state;
     return(
-      <div>
-        <img src={player.picture} />
-        <h1>#{player.number} {player.firstName} {player.lastName}</h1>
-        <p>Position: {player.primaryPosition}</p>
-        <p>Bat Side: {player.batSide}</p>
-        <p>Throw Side: {player.throwSide}</p>
-        <p>Birth City: {player.birthCity}, {player.birthStateProvince}, {player.birthCountry}</p>
+      <div className='App'>
+        <div className='Player'>
+          <img src={player.picture} />
+          <h1>{player.firstName} {player.lastName} #{player.number}</h1>
+          <p><b>Position:</b> {player.primaryPosition}</p>
+          <p><b>Bat Side:</b> {player.batSide}</p>
+          <p><b>Throw Side:</b> {player.throwSide}</p>
+          <p><b>Birth City:</b> {player.birthCity}, {player.birthStateProvince}, {player.birthCountry}</p>
+        </div>
       </div>
     );
   }

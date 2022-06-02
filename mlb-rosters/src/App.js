@@ -1,12 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Teams from './components/Teams';
-import Players from './components/Players';
 import Player from './components/Player';
 import './App.css';
 import React from 'react';
 import Roster from './components/Roster';
-
-//             <Route path='teams/:id/players' element={<Roster/>} />
 
 class App extends React.Component {
   render () {
