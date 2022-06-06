@@ -51,15 +51,11 @@
   box-shadow: 7px 7px 5px grey;
 }
 
-.Dropdown {
-  align-self: center;
-}
-
 .Player {
   background-color: white;
   width: 400px;
   padding: 50px;
-  box-shadow: 7px 7px 5px grey;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .Jumbotron {

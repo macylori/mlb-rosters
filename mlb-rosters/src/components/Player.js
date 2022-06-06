@@ -42,7 +42,7 @@ class Player extends React.Component {
     return(
       <div className='App'>
         <div className='Player'>
-          <img src={player.picture} />
+          <img src={player.picture} style={{ borderRadius: '50%', backgroundColor: 'grey' }} />
           <h1>{player.firstName} {player.lastName} #{player.number}</h1>
           <p><b>Position:</b> {player.primaryPosition}</p>
           <p><b>Bat Side:</b> {player.batSide}</p>
