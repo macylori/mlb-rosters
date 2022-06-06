@@ -66,8 +66,8 @@ class Teams extends React.Component {
         <div>
           <button onClick={() => this.setLeagueFilter('', false)}>All Teams</button>
           <br />
-          <button className='button' onClick={() => this.setLeagueFilter('National League', true)}>National League</button>
-          <button className='button' onClick={() => this.setLeagueFilter('American League', true)}>American League</button>
+          <button onClick={() => this.setLeagueFilter('National League', true)}>National League</button>
+          <button onClick={() => this.setLeagueFilter('American League', true)}>American League</button>
           <br />
           <button onClick={() => this.setDivisionFilter('National League East', true)}>National League East</button>
           <button onClick={() => this.setDivisionFilter('National League West', true)}>National League West</button>
