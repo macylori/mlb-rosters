@@ -20,7 +20,7 @@ nano config.js
 ```
 Add the API key in single quotes next to the API config.
 
-Ex: API_KEY = 'my-api-key'
+Ex: API_KEY : 'my-api-key'
 
 Then, install dependencies.
 
