@@ -33,6 +33,11 @@ class Player extends React.Component {
 
   render () {
     const { error, isLoaded, player } = this.state;
+    let city = player.birthCity
+    if (player.birthStateProvince != null) {
+      city += ', ' + player.birthStateProvince
+    }
+    city += ', ' + player.birthCountry
     return(
       <div className='App'>
         <div className='Player'>
@@ -41,7 +46,7 @@ class Player extends React.Component {
           <p><b>Position:</b> {player.primaryPosition}</p>
           <p><b>Bat Side:</b> {player.batSide}</p>
           <p><b>Throw Side:</b> {player.throwSide}</p>
-          <p><b>Birth City:</b> {player.birthCity}, {player.birthStateProvince}, {player.birthCountry}</p>
+          <p><b>Birth City:</b> {city}</p>
         </div>
       </div>
     );

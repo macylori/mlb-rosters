@@ -9,8 +9,10 @@ class Roster extends React.Component {
       error:null,
       isLoaded: false,
       players: [],
-      url: 'http://brew-roster-svc.us-e2.cloudhub.io/api/teams/' + window.location.pathname.substring(7,10) + '/players'
+      url: 'http://brew-roster-svc.us-e2.cloudhub.io/api/teams/' + window.location.pathname.substring(7,10) + '/players',
+      playerPhoto: []
     };
+    this.getPhoto = this.getPhoto.bind(this);
   }
 
   componentDidMount() {
@@ -31,6 +33,26 @@ class Roster extends React.Component {
     )
   }
 
+  getPhoto(id) {
+    var url = 'http://brew-roster-svc.us-e2.cloudhub.io/api/player/' + id
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'api-key': '0ca80ddc-63f6-476e-b548-e5fb0934fc4b'
+      }
+    })
+    .then(response => response.json())
+    .then(
+      (result) => {
+        console.log('Result', result)
+        this.setState({
+          playerPhoto: result.picture
+        })
+      }
+    )
+  }
+
+  // <img src={ () => this.getPhoto(player.id) } />
   render () {
     const { error, isLoaded, players } = this.state;
     return(
@@ -38,9 +60,11 @@ class Roster extends React.Component {
         <h1 style={{ textAlign: 'center' }}>Team Roster</h1>
         <div style={{ alignItems: 'center' }}>
         { players.map((player) => (
+          <div>
             <p style={{ textDecoration: 'none' }}>
               <Link to={`/player/${ player.id }`} style={{ textDecoration: 'none', color: 'black' }}>{player.name}</Link>
             </p>
+          </div>
         )) }
       </div>
       </div>

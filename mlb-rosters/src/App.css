@@ -44,6 +44,7 @@
   font-size: larger;
   color: black;
   width: 200px;
+  height: 150px;
   padding: 50px;
   margin: 20px;
   background-color: white;
@@ -56,7 +57,7 @@
 
 .Player {
   background-color: white;
-  width: 500px;
+  width: 400px;
   padding: 50px;
   box-shadow: 7px 7px 5px grey;
 }
