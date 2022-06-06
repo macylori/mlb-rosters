@@ -22,9 +22,10 @@ Add the API key in single quotes next to the API config.
 
 Ex: API_KEY : 'my-api-key'
 
-Then, install dependencies.
+Then, go up one directory and install dependencies.
 
 ```
+cd ..
 npm install
 ```
 
