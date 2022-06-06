@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import {config} from '../config'
 
 class Player extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class Player extends React.Component {
     fetch(this.state.url, {
       method: 'GET',
       headers: {
-        'api-key': '0ca80ddc-63f6-476e-b548-e5fb0934fc4b'
+        'api-key': config.API_KEY
       }
     })
     .then(response => response.json())

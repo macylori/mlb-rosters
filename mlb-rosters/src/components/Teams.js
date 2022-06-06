@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, DropdownButton, Dropdown, ButtonGroup, Button } from 'react-bootstrap';
 import { BrowserRouter, Link } from 'react-router-dom';
 import '../App.css'; 
+import {config} from '../config'
 
 class Teams extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Teams extends React.Component {
     fetch('http://brew-roster-svc.us-e2.cloudhub.io/api/teams', {
       method: 'GET',
       headers: {
-        'api-key': '0ca80ddc-63f6-476e-b548-e5fb0934fc4b'
+        'api-key': config.API_KEY
       }
     })
     .then(response => response.json())
