@@ -11,7 +11,12 @@ git clone https://github.com/macylori/mlb-rosters
 Then navigate to the application folder.
 
 ```
-cd mlb-rosters
+cd mlb-rosters/mlb-rosters
+```
+Then, install dependencies.
+
+```
+npm install
 ```
 
 Finally, start the application.
