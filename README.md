@@ -5,7 +5,7 @@
 First, clone the repository using the command below.
 
 ```
-git clone https://github.com/macylori/mlb-rosters/edit/master
+git clone https://github.com/macylori/mlb-rosters
 ```
 
 Then navigate to the application folder.
