@@ -8,14 +8,24 @@ First, clone the repository using the command below.
 git clone https://github.com/macylori/mlb-rosters
 ```
 
-Then navigate to the application folder.
+Then navigate to the application source folder.
 
 ```
-cd mlb-rosters/mlb-rosters
+cd mlb-rosters/mlb-rosters/src
 ```
-Then, install dependencies.
+Next, add the API key to the config.js
 
 ```
+nano config.js
+```
+Add the API key in single quotes next to the API config.
+
+Ex: API_KEY : 'my-api-key'
+
+Then, go up one directory and install dependencies.
+
+```
+cd ..
 npm install
 ```
 
